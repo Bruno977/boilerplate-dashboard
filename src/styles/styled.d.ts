@@ -31,33 +31,34 @@ declare module 'styled-components' {
       mauveA11: string;
       mauveA12: string;
 
-      // Purple
-      purple1: string;
-      purple2: string;
-      purple3: string;
-      purple4: string;
-      purple5: string;
-      purple6: string;
-      purple7: string;
-      purple8: string;
-      purple9: string;
-      purple10: string;
-      purple11: string;
-      purple12: string;
+      // Orange
+      orange1: string;
+      orange2: string;
+      orange3: string;
+      orange4: string;
+      orange5: string;
+      orange6: string;
+      orange7: string;
+      orange8: string;
+      orange9: string;
+      orange10: string;
+      orange11: string;
+      orange12: string;
 
-      // Purple Alpha
-      purpleA1: string;
-      purpleA2: string;
-      purpleA3: string;
-      purpleA4: string;
-      purpleA5: string;
-      purpleA6: string;
-      purpleA7: string;
-      purpleA8: string;
-      purpleA9: string;
-      purpleA10: string;
-      purpleA11: string;
-      purpleA12: string;
+      // Orange Alpha
+
+      orangeA1: string;
+      orangeA2: string;
+      orangeA3: string;
+      orangeA4: string;
+      orangeA5: string;
+      orangeA6: string;
+      orangeA7: string;
+      orangeA8: string;
+      orangeA9: string;
+      orangeA10: string;
+      orangeA11: string;
+      orangeA12: string;
     };
   }
 }

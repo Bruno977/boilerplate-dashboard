@@ -32,7 +32,6 @@ export function Sidebar({ collapsed }: SidebarProps) {
       width={280}
     >
       <Menu
-        theme="dark"
         mode="inline"
         defaultSelectedKeys={['/']}
         selectedKeys={[location.pathname]}

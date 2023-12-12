@@ -1,37 +1,42 @@
 import { useState } from 'react';
-import { Layout as LayoutAntd } from 'antd';
+import { ConfigProvider, Layout as LayoutAntd } from 'antd';
 import { Sidebar } from '../Sidebar';
 import { Header } from '../Header';
-import { Content } from 'antd/es/layout/layout';
+
 import { Outlet } from 'react-router-dom';
+import { ContentLayout } from './style';
+import { ThemeProvider } from 'styled-components';
+import { useToggleThemeContext } from '../../contexts/ToggleThemeContext';
+import { darkConfig, darkTheme } from '../../styles/theme/darkMode';
+import { lightConfig, lightTheme } from '../../styles/theme/lightMode';
+import { GlobalStyle } from '../../styles/global';
 
 export function Layout() {
   const [collapsed, setCollapsed] = useState(false);
-
+  const { theme } = useToggleThemeContext();
   return (
-    <LayoutAntd hasSider>
-      <Sidebar collapsed={collapsed} />
-      <LayoutAntd
-        style={{
-          marginLeft: collapsed ? 80 : 280,
-          marginTop: 64,
-          transition: 'all 0.3s ease 0s',
-        }}
-      >
-        <Header
-          collapsed={collapsed}
-          toggleSidebar={() => setCollapsed(!collapsed)}
-        />
-        <Content
-          style={{
-            margin: '24px 16px',
-            padding: 24,
-            minHeight: '100vh',
-          }}
-        >
-          <Outlet />
-        </Content>
-      </LayoutAntd>
-    </LayoutAntd>
+    <ConfigProvider theme={theme === 'dark' ? darkConfig : lightConfig}>
+      <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+        <GlobalStyle />
+        <LayoutAntd hasSider>
+          <Sidebar collapsed={collapsed} />
+          <LayoutAntd
+            style={{
+              marginLeft: collapsed ? 80 : 280,
+              marginTop: 64,
+              transition: 'all 0.3s ease 0s',
+            }}
+          >
+            <Header
+              collapsed={collapsed}
+              toggleSidebar={() => setCollapsed(!collapsed)}
+            />
+            <ContentLayout>
+              <Outlet />
+            </ContentLayout>
+          </LayoutAntd>
+        </LayoutAntd>
+      </ThemeProvider>
+    </ConfigProvider>
   );
 }

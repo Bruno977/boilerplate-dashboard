@@ -1,44 +1,50 @@
-import {
-  Bars3BottomLeftIcon,
-  Bars3BottomRightIcon,
-} from '@heroicons/react/24/outline';
 import { Button } from 'antd';
-import { Header as HeaderAntd } from 'antd/es/layout/layout';
-import { Logo } from './style';
+
+import {
+  ButtonToggleSide,
+  ButtonToggleTheme,
+  HeaderContainer,
+  Logo,
+} from './style';
+import {
+  BulbOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+} from '@ant-design/icons';
+
+import { useToggleThemeContext } from '../../contexts/ToggleThemeContext';
 
 type HeaderProps = {
   collapsed: boolean;
   toggleSidebar: () => void;
 };
 export function Header({ collapsed, toggleSidebar }: HeaderProps) {
+  const { handleToggleDarkMode } = useToggleThemeContext();
   return (
-    <HeaderAntd
-      style={{
-        position: 'fixed',
-        width: '100%',
-        top: 0,
-        left: 0,
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
-      <Logo>Logo</Logo>
-      <Button
-        type="text"
-        icon={
-          collapsed ? (
-            <Bars3BottomLeftIcon color="#fff" width={24} height={24} />
-          ) : (
-            <Bars3BottomRightIcon color="#fff" width={24} height={24} />
-          )
-        }
-        onClick={toggleSidebar}
-        style={{
-          fontSize: '16px',
-          width: 64,
-          height: 64,
-        }}
-      />
-    </HeaderAntd>
+    <HeaderContainer>
+      <div>
+        <Logo>Logo</Logo>
+        <ButtonToggleSide
+          type="text"
+          icon={
+            collapsed ? (
+              <MenuUnfoldOutlined style={{ fontSize: '1.5rem' }} />
+            ) : (
+              <MenuFoldOutlined style={{ fontSize: '1.5rem' }} />
+            )
+          }
+          onClick={toggleSidebar}
+        />
+      </div>
+      <div>
+        <ButtonToggleTheme
+          type="primary"
+          shape="circle"
+          onClick={handleToggleDarkMode}
+        >
+          <BulbOutlined />
+        </ButtonToggleTheme>
+      </div>
+    </HeaderContainer>
   );
 }
