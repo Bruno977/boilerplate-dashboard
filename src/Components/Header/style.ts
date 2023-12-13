@@ -23,13 +23,23 @@ export const HeaderContainer = styled(Header)`
 export const Logo = styled.div`
   height: 32px;
   margin-right: 60px;
-  background: ${(props) => props.theme.colors.mauveA10};
+  background: ${(props) => props.theme.colors.mauve1};
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props) => props.theme.colors.mauve12};
-  width: 100px;
+  gap: 10px;
+  padding: 20px 20px;
+  span svg {
+    color: ${(props) => props.theme.colors.orange10};
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  > span {
+    font-size: 1.125rem;
+    color: ${(props) => props.theme.colors.mauve12};
+    font-weight: bold;
+  }
 `;
 
 export const ButtonToggleSide = styled(Button)`
@@ -43,4 +53,5 @@ export const ButtonToggleSide = styled(Button)`
 
 export const ButtonToggleTheme = styled(Button)`
   color: ${(props) => props.theme.colors.mauve12};
+  /* box-shadow: none; */
 `;

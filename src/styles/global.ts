@@ -10,10 +10,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   html,
   body {
-    background-color: ${(props) => props.theme.colors.mauve1};
+    /* background-color: ${(props) => props.theme.colors.mauve1}; */
     font-family: 'Jost', sans-serif;
     width: 100%;
-    ${(props) => props.theme.transition}
+    /* ${(props) => props.theme.transition} */
   }
   input, label{
     font-family: 'Roboto', sans-serif;

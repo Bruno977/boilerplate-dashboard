@@ -1,5 +1,3 @@
-import { Button } from 'antd';
-
 import {
   ButtonToggleSide,
   ButtonToggleTheme,
@@ -7,6 +5,7 @@ import {
   Logo,
 } from './style';
 import {
+  BankOutlined,
   BulbOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -23,7 +22,10 @@ export function Header({ collapsed, toggleSidebar }: HeaderProps) {
   return (
     <HeaderContainer>
       <div>
-        <Logo>Logo</Logo>
+        <Logo>
+          <BankOutlined />
+          <span>Simulador</span>
+        </Logo>
         <ButtonToggleSide
           type="text"
           icon={
@@ -38,12 +40,12 @@ export function Header({ collapsed, toggleSidebar }: HeaderProps) {
       </div>
       <div>
         <ButtonToggleTheme
+          size="middle"
           type="primary"
           shape="circle"
+          icon={<BulbOutlined />}
           onClick={handleToggleDarkMode}
-        >
-          <BulbOutlined />
-        </ButtonToggleTheme>
+        />
       </div>
     </HeaderContainer>
   );

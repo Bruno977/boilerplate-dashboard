@@ -6,6 +6,8 @@ import {
 } from '@radix-ui/colors';
 import { ThemeConfig } from 'antd';
 
+import { tokens } from './variables';
+
 export const darkTheme = {
   colors: {
     ...mauveDark,
@@ -18,7 +20,15 @@ export const darkTheme = {
 export const darkConfig = {
   token: {
     colorPrimary: orangeDark.orange3,
-    fontFamily: 'Jost',
+    colorPrimaryText: orangeDark.orange3,
+
+    colorPrimaryBgHover: orangeDark.orange4,
+    colorPrimaryHover: orangeDark.orange4,
+
+    colorPrimaryActive: orangeDark.orange5,
+
+    colorText: mauveDark.mauve12,
+    ...tokens,
   },
   components: {
     Layout: {
@@ -29,9 +39,11 @@ export const darkConfig = {
     Menu: {
       itemBg: mauveDark.mauve2,
       itemColor: mauveDark.mauve12,
+
       itemActiveBg: orangeDark.orange5,
       itemHoverBg: orangeDark.orange4,
       itemHoverColor: orangeDark.orange11,
+
       itemSelectedBg: orangeDark.orange4,
       itemSelectedColor: orangeDark.orange11,
 
