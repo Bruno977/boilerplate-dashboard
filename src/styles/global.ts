@@ -18,6 +18,9 @@ export const GlobalStyle = createGlobalStyle`
   input, label{
     font-family: 'Roboto', sans-serif;
   }
+  label{
+    font-weight: 500;
+  }
   a{
     text-decoration: none;
   }

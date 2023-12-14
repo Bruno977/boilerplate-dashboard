@@ -6,7 +6,7 @@ import {
 } from '@radix-ui/colors';
 import { ThemeConfig } from 'antd';
 
-import { tokens } from './variables';
+import { tokens, InputToken, ButtonToken } from './variables';
 
 export const darkTheme = {
   colors: {
@@ -20,7 +20,7 @@ export const darkTheme = {
 export const darkConfig = {
   token: {
     colorPrimary: orangeDark.orange3,
-    colorPrimaryText: orangeDark.orange3,
+    colorPrimaryText: mauveDark.mauve12,
 
     colorPrimaryBgHover: orangeDark.orange4,
     colorPrimaryHover: orangeDark.orange4,
@@ -28,6 +28,8 @@ export const darkConfig = {
     colorPrimaryActive: orangeDark.orange5,
 
     colorText: mauveDark.mauve12,
+    colorTextLabel: mauveDark.mauve12,
+    colorTextLightSolid: mauveDark.mauve12,
     ...tokens,
   },
   components: {
@@ -48,6 +50,12 @@ export const darkConfig = {
       itemSelectedColor: orangeDark.orange11,
 
       activeBarBorderWidth: 0,
+    },
+    Input: {
+      ...InputToken,
+    },
+    Button: {
+      ...ButtonToken,
     },
   },
 } as ThemeConfig;

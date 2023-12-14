@@ -1,17 +1,12 @@
+import { ButtonToggleSide, ButtonToggleTheme, HeaderContainer } from './style';
 import {
-  ButtonToggleSide,
-  ButtonToggleTheme,
-  HeaderContainer,
-  Logo,
-} from './style';
-import {
-  BankOutlined,
   BulbOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
 } from '@ant-design/icons';
 
 import { useToggleThemeContext } from '../../contexts/ToggleThemeContext';
+import { Logo } from '../Logo';
 
 type HeaderProps = {
   collapsed: boolean;
@@ -22,10 +17,7 @@ export function Header({ collapsed, toggleSidebar }: HeaderProps) {
   return (
     <HeaderContainer>
       <div>
-        <Logo>
-          <BankOutlined />
-          <span>Simulador</span>
-        </Logo>
+        <Logo />
         <ButtonToggleSide
           type="text"
           icon={

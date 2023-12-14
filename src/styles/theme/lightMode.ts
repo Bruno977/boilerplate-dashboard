@@ -1,5 +1,5 @@
 import { mauve, mauveA, orange, orangeA } from '@radix-ui/colors';
-import { tokens } from './variables';
+import { tokens, InputToken, ButtonToken, CardToken } from './variables';
 import { ThemeConfig } from 'antd';
 
 export const lightTheme = {
@@ -14,7 +14,7 @@ export const lightTheme = {
 export const lightConfig = {
   token: {
     colorPrimary: orange.orange3,
-    colorPrimaryText: orange.orange3,
+    colorPrimaryText: mauve.mauve12,
 
     colorPrimaryBgHover: orange.orange4,
     colorPrimaryHover: orange.orange4,
@@ -22,6 +22,10 @@ export const lightConfig = {
     colorPrimaryActive: orange.orange5,
 
     colorText: mauve.mauve12,
+    colorTextLabel: mauve.mauve12,
+    colorTextLightSolid: mauve.mauve12,
+
+    colorLink: orange.orange11,
     ...tokens,
   },
   components: {
@@ -42,6 +46,16 @@ export const lightConfig = {
       itemSelectedColor: orange.orange11,
 
       activeBarBorderWidth: 0,
+    },
+    Input: {
+      ...InputToken,
+    },
+    Button: {
+      ...ButtonToken,
+    },
+    Form: {},
+    Card: {
+      ...CardToken,
     },
   },
 } as ThemeConfig;
