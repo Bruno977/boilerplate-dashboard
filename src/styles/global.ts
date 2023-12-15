@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
+import { Content } from 'antd/es/layout/layout';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -30,4 +31,11 @@ export const GlobalStyle = createGlobalStyle`
   img {
     max-width: 100%; 
 }
+`;
+
+export const ContentAntd = styled(Content)`
+  padding: 24px;
+  min-height: 100vh;
+  background-color: ${(props) => props.theme.colors.mauve2};
+  border-radius: 6px;
 `;

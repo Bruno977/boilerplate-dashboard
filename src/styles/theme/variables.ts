@@ -11,8 +11,9 @@ export const ButtonToken = {
   contentFontSizeLG: 14,
 };
 
-export const FormToken = {};
+// export const FormToken = {};
 
 export const CardToken = {
   headerFontSize: 20,
 };
+export const TableToken = {};

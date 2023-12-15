@@ -31,5 +31,6 @@ export const ButtonToggleSide = styled(Button)`
 
 export const ButtonToggleTheme = styled(Button)`
   color: ${(props) => props.theme.colors.mauve12};
+  box-shadow: none;
   /* box-shadow: none; */
 `;

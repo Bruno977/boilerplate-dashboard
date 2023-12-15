@@ -13,9 +13,9 @@ export function Logo({
 }: LogoProps) {
   return (
     <ContainerLogo
-      logoSize={logoSize}
-      labelSize={labelSize}
-      labelWeight={labelWeight}
+      $logoSize={logoSize}
+      $labelSize={labelSize}
+      $labelWeight={labelWeight}
     >
       <BankOutlined />
       <span>Simulador</span>

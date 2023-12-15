@@ -17,7 +17,9 @@ export function Header({ collapsed, toggleSidebar }: HeaderProps) {
   return (
     <HeaderContainer>
       <div>
-        <Logo />
+        <div style={{ marginRight: '40px' }}>
+          <Logo />
+        </div>
         <ButtonToggleSide
           type="text"
           icon={

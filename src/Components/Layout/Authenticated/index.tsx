@@ -4,7 +4,7 @@ import { Sidebar } from '../../Sidebar';
 import { Header } from '../../Header';
 
 import { Outlet } from 'react-router-dom';
-import { ContentLayout } from './style';
+import { Container } from './style';
 import { ThemeProvider } from 'styled-components';
 import { useToggleThemeContext } from '../../../contexts/ToggleThemeContext';
 import { darkConfig, darkTheme } from '../../../styles/theme/darkMode';
@@ -31,9 +31,9 @@ export function LayoutAuthenticated() {
               transition: 'all 0.3s ease 0s',
             }}
           >
-            <ContentLayout>
+            <Container>
               <Outlet />
-            </ContentLayout>
+            </Container>
           </LayoutAntd>
         </LayoutAntd>
       </ThemeProvider>

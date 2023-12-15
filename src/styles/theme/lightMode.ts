@@ -13,6 +13,7 @@ export const lightTheme = {
 
 export const lightConfig = {
   token: {
+    colorBgContainer: mauve.mauve2,
     colorPrimary: orange.orange3,
     colorPrimaryText: mauve.mauve12,
 
@@ -32,7 +33,7 @@ export const lightConfig = {
     Layout: {
       headerBg: mauve.mauve2,
       siderBg: mauve.mauve2,
-      bodyBg: mauve.mauve1,
+      bodyBg: mauve.mauve3,
     },
     Menu: {
       itemBg: mauve.mauve2,
@@ -53,9 +54,20 @@ export const lightConfig = {
     Button: {
       ...ButtonToken,
     },
-    Form: {},
+    // Form: {},
     Card: {
       ...CardToken,
+    },
+    Table: {
+      headerBg: mauve.mauve3,
+      headerColor: mauve.mauve12,
+      rowHoverBg: mauve.mauve3,
+      borderColor: mauve.mauve3,
+      colorSplit: mauve.mauve6,
+      // rowExpandedBg: mauve.mauve12,
+      // rowSelectedBg: mauve.mauve12,
+      // rowSelectedHoverBg: mauve.mauve12,
+      // lineWidth: 0,
     },
   },
 } as ThemeConfig;
